@@ -83,6 +83,8 @@ export function main() {
                 console.log("Digite o valor do produto: ");
                 valor = readlinesync.questionInt("");
 
+                sneakers.cadastrar(new SneakersNike(numero, modelo, marca, tamanho, cor, valor));
+
                 keyPress();
                 break;
             case 2:
@@ -128,7 +130,6 @@ export function main() {
                     valor = readlinesync.questionFloat("");
 
                     sneakers.atualizar(new SneakersNike(numero, modelo, marca, tamanho, cor, valor))
-                    sneakers.atualizar(new SneakersAdidas(numero, modelo, marca, tamanho, cor, valor))
 
                 } else {
                     console.log("\nO Sneaker numero: " + numero + " não foi encontrado!");
