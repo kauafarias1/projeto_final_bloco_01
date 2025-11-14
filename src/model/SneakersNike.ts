@@ -1,0 +1,9 @@
+import { Sneakers } from "./Sneakers";
+
+export class SnakersNike extends Sneakers {
+
+    constructor(numero: number, modelo: string, marca: number, tamanho: number, cor: string, valor: number) {
+        super(numero, modelo, marca, tamanho, cor, valor)
+    }
+
+}

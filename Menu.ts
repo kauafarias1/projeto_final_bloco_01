@@ -1,8 +1,17 @@
 import readlinesync = require("readline-sync");
+import { Sneakers } from "./src/model/Sneakers";
+import { SnakersNike } from "./src/model/SneakersNike";
+import { SneakersAdidas } from "./src/model/SneakersAdidas";
 
 export function main() {
 
     let opcao: number;
+
+    const sneakersnike: SnakersNike = new SnakersNike(2, "Nike SB Force 58", 1, 41, "Cinza", 360.99)
+    sneakersnike.visualizar();
+
+    const sneakersadidas: SneakersAdidas = new SneakersAdidas(3, "Adidas Campus 00S", 2, 40, "Preto", 549.99)
+    sneakersadidas.visualizar();
 
     while (true) {
 
@@ -14,7 +23,7 @@ export function main() {
         console.log("                                                     ");
         console.log("            1 - Cadastrar produto                    ");
         console.log("            2 - Listar produtos                      ");
-        console.log("            3 - Buscar produto por numero            ");
+        console.log("            3 - Buscar produto por numero             ");
         console.log("            4 - Atualizar produtos                   ");
         console.log("            5 - Excluir produto                      ");
         console.log("            6 - Sair                                 ");
@@ -61,14 +70,18 @@ export function main() {
 
 }
 
-/* Função com os dados da pessoa desenvolvedora */
-
 export function sobre(): void {
     console.log("\n*****************************************************");
     console.log("Projeto Desenvolvido por: Kaua Gabriel de Farias ");
     console.log("kauagabrielfarias18@gmail.com");
-    console.log("github.com/kauafarias");
+    console.log("github.com/kauafarias1");
     console.log("*****************************************************");
+}
+
+function keyPress(): void {
+    console.log("");
+    console.log("\nPressione enter para continuar...");
+    readlinesync.prompt();
 }
 
 main();
