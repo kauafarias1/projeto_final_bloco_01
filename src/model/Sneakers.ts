@@ -2,12 +2,12 @@ export abstract class Sneakers {
 
     private _numero: number;
     private _modelo: string;
-    private _marca: number;
+    private _marca: string;
     private _tamanho: number;
     private _cor: string;
     private _valor: number;
 
-    constructor(numero: number, modelo: string, marca: number, tamanho: number, cor: string, valor: number) {
+    constructor(numero: number, modelo: string, marca: string, tamanho: number, cor: string, valor: number) {
         this._numero = numero;
         this._modelo = modelo;
         this._marca = marca;
@@ -37,7 +37,7 @@ export abstract class Sneakers {
         return this._marca
     }
 
-    public set marca(marca: number) {
+    public set marca(marca: string) {
         this._marca
     }
 
@@ -67,23 +67,13 @@ export abstract class Sneakers {
 
 public visualizar(): void {
 
-        let marca: string = "";
-
-        switch (this._marca) {
-            case 1:
-                marca = "Nike";
-                break;
-            case 2:
-                marca = "Adidas";
-                break;
-        }
 
         console.log("\n\n*****************************************************");
         console.log("Dados do produto:");
         console.log("*****************************************************");
         console.log("Numero do produto: " + this._numero);
         console.log("Modelo do produto: " + this._modelo);
-        console.log("Marca do produto: " + marca);
+        console.log("Marca do produto: " + this._marca);
         console.log("Tamanho do produto: " + this._tamanho);
         console.log("Cor do produto: " + this._cor);
         console.log("Valor do produto: " + this._valor.toFixed(2))
