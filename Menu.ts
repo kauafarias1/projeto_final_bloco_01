@@ -31,7 +31,7 @@ export function main() {
     const sneakersnike: SneakersNike = new SneakersNike(2, "Nike SB Force 58", "Nike", 41, "Cinza", 360.99)
     sneakersnike.visualizar();
 
-    const sneakersadidas: SneakersAdidas = new SneakersAdidas(3, "Adidas Campus 00S", "Adidas", 40, "Preto", 549.99)
+    const sneakersadidas: SneakersAdidas = new SneakersNike(3, "Adidas Campus 00S", "Adidas", 40, "Preto", 549.99)
     sneakersadidas.visualizar();
 
     while (true) {
